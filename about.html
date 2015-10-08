@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!--
+	Horizons by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+	 <style>
+      #map-canvas {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script>
+
+	function initialize() {
+	  // Create a map 
+	  map = new google.maps.Map(document.getElementById('map-canvas'), {
+		center: {lat: 30.244168, lng: -97.801929},
+		zoom: 15
+	  });
+
+	  // Search for Barton creek
+	  var request = {
+		location: map.getCenter(),
+		radius: '500',
+		query: 'Barton Creek'
+	  };
+
+	  var service = new google.maps.places.PlacesService(map);
+	  service.textSearch(request, callback);
+	}
+
+	// Checks that the PlacesServiceStatus is OK, and adds a marker
+	// using the place ID and location from the PlacesService.
+	function callback(results, status) {
+	  if (status == google.maps.places.PlacesServiceStatus.OK) {
+		var marker = new google.maps.Marker({
+		  map: map,
+		  place: {
+			placeId: results[0].place_id,
+			placeId: ChIJ83ZX0ANKW4YRpL_udMbskGg,
+			location: results[0].geometry.location
+		  }
+		});
+	  }
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+   
+    </script>
+		<title>About</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		 <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script>
+
+	function initialize() {
+	  // Create a map 
+	  map = new google.maps.Map(document.getElementById('map-canvas'), {
+		center: {lat: 30.244168, lng: -97.801929},
+		zoom: 15
+	  });
+
+	  // Search for Barton creek
+	  var request = {
+		location: map.getCenter(),
+		radius: '500',
+		query: 'Barton Creek'
+	  };
+
+	  var service = new google.maps.places.PlacesService(map);
+	  service.textSearch(request, callback);
+	}
+
+	// Checks that the PlacesServiceStatus is OK, and adds a marker
+	// using the place ID and location from the PlacesService.
+	function callback(results, status) {
+	  if (status == google.maps.places.PlacesServiceStatus.OK) {
+		var marker = new google.maps.Marker({
+		  map: map,
+		  place: {
+			placeId: results[0].place_id,
+			placeId: ChIJ83ZX0ANKW4YRpL_udMbskGg,
+			location: results[0].geometry.location
+		  }
+		});
+	  }
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+   
+    </script>
+	</head>
+	<body class="left-sidebar">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="container">
+						
+					<!-- Logo -->
+						<h1><a href="#" id="logo">About the Project</a></h1>
+					
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.php">Home</a></li>
+									<li>
+									<a href="">Plants</a>
+									<ul>
+										<li><a href="seasonsearch.php">By Month</a></li>
+										<li><a href="colorsearch.php">By Color</a></li>
+										<li><a href="sizesearch.php">By Size</a></li>
+									</ul>
+								</li>              
+								<li><a href="about.html">About</a></li>
+							</ul>
+						</nav>
+
+				</div>
+			</div>
+
+		<!-- Main -->
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						
+						<!-- Content -->
+						<div id="content" class="8u skel-cell-important">
+							<section>
+							<h2>Barton Creek</h2>
+									<div id="map-canvas"></div>
+								<!--<header class="major">-->
+									<p><h2>About the Project</h2></p>
+									<!--<span class="byline">Native Plants of Barton Springs/Edwards Aquifer District Database</span>-->
+								<!--</header>-->
+								<p>The Barton Plants database provides information about 259 plants both native to Texas and endemic to the Barton Creek watershed in Austin. The site is designed to serve anybody 
+interested in learning more about one of Austin’s most beautiful and diverse landscapes, from gardeners, botanists, and aspiring naturalists to locavores and curious hikers and joggers.</p>
+								<p>Information in the database, which was built in April 2015 and should be used for purely educational purposes, was compiled from a variety of sources, though its foundation is Ann 
+Bond’s Native Plant Society of Texas, Austin Chapter, <a href="http://www.npsot.org/Austin/PlantLists/Barton%20Creek%20Habitat%20Preserve%20NPSOT%20List.pdf" target="_blank">survey</a> of plants within the <a 
+href="http://www.nature.org/ourinitiatives/regions/northamerica/unitedstates/texas/placesweprotect/barton-creek-habitat-preserve.xml" target="_blank">Barton Creek Habitat Preserve</a>.</p>
+								<p>We do not accept responsibility or liability for any ingested plant material. Rather, we urge caution before eating anything listed as edible in the database and also recommend 
+consulting a more authoritative source, such as Delena Tull’s <a href="http://utpress.utexas.edu/index.php/books/tule2p" target="_blank"><em>Edible and Useful Plants of the Southwest: Texas, New Mexico, and Arizona: Revised Edition</em></a> (University of Texas Press, 2013), 
+before 
+doing 
+so.</p
+									
+							</section>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+
+					<!-- Lists -->
+						<div class="row">
+							<div class="8u">
+								<section>
+									<header class="major">
+										<h3>Database Management Spring 2015</h3>
+										<span class="byline">Taught by Stan Gunn</span>
+									</header>
+									<div class="row">
+											<ul class="default">
+												<li><a href="http://www.wildflower.org/plants/" target="_blank">All photographs borrowed from the Lady Bird Johnson Wildflower Center</a></li>
+											</ul>
+									</div>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<header class="major">
+										<h3>Contact</h3>
+										<span class="byline">Send us your questions</span>
+									</header>
+									<ul class="contact">
+										
+										<li>
+											<span class="mail">Mail</span>
+											<span><a href="#">bartonplants@somewhere.net</a></span>
+										</li>
+										<li>
+											<span class="phone">Phone</span>
+											<span>(000) 000-0000</span>
+										</li>
+									</ul>	
+								</section>
+							</div>
+						</div>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+						</div>
+
+				</div>
+			</div>
+
+	</body>
+</html>
